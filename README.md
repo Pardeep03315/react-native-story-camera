@@ -48,7 +48,7 @@ It is simple to use and fully customizable. It works on both android and iOS pla
 ```
 #### --- or ---
 ```bash
-  yarn add @delainetech/react-native-media-picker
+  yarn add @delainetech/react-native-story-camera
 ```
 
 ##### 2. Install peer dependencies
