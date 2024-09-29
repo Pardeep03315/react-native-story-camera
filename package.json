@@ -1,0 +1,45 @@
+{
+  "name": "@delainetech/react-native-story-camera",
+  "version": "1.0.0",
+  "description": "React Native Whatsapp like Camera and Gallery picker for iOS & Android",
+  "homepage": "https://bitbucket.org/delainetech/cameraview/src/main/#readme",
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+    "react native",
+    "camera",
+    "photo gallery",
+    "camera picker",
+    "gallery picker",
+    "whatsapp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uplsourav/react-native-cam-gallery.git"},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "@react-native-camera-roll/camera-roll": "^7.8.3",
+    "react": "18.2.0",
+    "react-native": "0.72.4",
+    "react-native-gesture-handler": "^2.20.0",
+    "react-native-image-crop-picker": "^0.41.2",
+    "react-native-permissions": "^4.1.5",
+    "react-native-reanimated": "^3.15.3",
+    "react-native-vision-camera": "^4.5.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.67.0",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
