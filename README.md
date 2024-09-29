@@ -6,7 +6,7 @@
 
 ---
 
-React Native Story Camera is a Fully Customizable UI Library that provide camera picker module for capture photos and record videos in React Native, inspired by WhatsApp's media sharing experience. This module provides a seamless, bug-free experience, optimized for performance and functionality.
+React Native Story Camera is a Fully Customizable UI Library that provide camera picker module for capture photos and record videos in React Native, inspired by WhatsApp's media sharing experience.
 
 
 ## 🎬  Overview
