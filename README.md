@@ -6,7 +6,7 @@
 
 ---
 
-React Native Story Camera is a Fully Customizable UI Library that provide camera picker module for capture photos and record videos in React Native, inspired by WhatsApp's media sharing experience.
+React Native Story Camera is a Fully Customizable UI Library that provide camera picker module for capture photos and record videos in React Native, inspired by WhatsApp's media sharing experience. This module provides a seamless, bug-free experience, optimized for performance and functionality.
 
 
 ## 🎬  Overview
@@ -138,31 +138,73 @@ Add the following permissions to your `AndroidManifest.xml` file:
 
 ```javascript
 
+import {  View } from 'react-native'
+
 import React from 'react'
-
-import { StyleSheet, Text, View } from 'react-native'
-
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import CameraPicker from 'react-native-story-camera';
 
-export default const App =()=> 
-{
+export default function App() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 , backgroundColor:"white" }}>
-
-       <CameraPicker
-        onSelect={(data)=>console.log("Data from  camera picker : ",data)}
-        onBackPress={()=>console.log("add your code  here for back press")}/>
-
-    </GestureHandlerRootView>
+      <View style={{ flex : 1}}>
+        <CameraPicker
+          onSelect={(data:any)=>console.log("data : "+JSON.stringify(data))}
+          onBackPress={()=>console.log("onBack Press")} />
+      </View>
   );
 }
+
+
 
 ```
 
 
-## Props
+## Icon Props & styles
+| Prop                | Default                         | Type      | Description                                                                                                                                                                                                                       |
+| :------------------ | :------------------------------ | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| containerStyle                | {}                         | ViewStyle    | CameraPicker container view style                                                                                                                                                                               |
+| backIcon            | default                           | Image   | Apply local icon image with require label                                                                                                                                                                             |
+| backIconStyle       | {}                         | ImageStyle    | Apply all style props of Image component react native  |
+| flashOnIcon             | default                               | Image  | Apply local icon image with require label                                                                                                                                                               |
+| flashOffIcon         | default                             | Image  | Apply local icon image with require label                                                                                                                                                           |
+| flashIconStyle               | default                              | ImageStyle  | Apply all style props of Image component react native                                                                                                                                                                                   |
+| galleryIcon           | default                             | Image | Apply local icon image with require label                                                                                                                                                                                                                     |
+| galleryIconStyle          | {}                              | ImageStyle | Apply all style props of Image component react native                                                                                                                                                                                                                      |
+| cameraToggleIcon   | default                             | Image  | Apply local icon image with require label                                                                                                                                                           |
+| cameraToggleIconStyle  | {}                           | ImageStyle   | Apply all style props of Image component react native                                                                                                                                                                                                      |
+| cameraCaptureIcon            | default                              | Image    | Apply local icon image with require label                                                                                                                                                                                 |
+| cameraCaptureIconStyle          | {}                              | ImageStyle | Apply all style props of Image component react native                                                                                                                                                                                                             |
+| videoCaptureIcon       | {}                              | Image | Apply local icon image with require label                                                                                                                                                                                                                   |
+| videoCaptureIconStyle | {}                              | ImageStyle |  Apply all style props of Image component react native                                                                                                                                                                                                            |
+| recordVideoIcon        | default                             | Image    | Apply local icon image with require label                                                                                                                                                                                                            |
+| recordVideoIconStyle        | {}                      | ImageStyle     |  Apply all style props of Image component react native                                                                                                                                                 |
+| slideUpIcon       | default                             | Image    | Apply local icon image with require label                                                                                                                                                                                                         |
+| slideUpIconStyle       | {}                             | ImageStyle    | Apply all style props of Image component react native                                                                                                                                                                                                        |
+| submitButtonStyle       | {}                             | ViewStyle    | Submit Button icon container , Apply all style props of View component                                                                                                                                                                                                       |
+| submitButtonIcon       | default                             | Image    | Apply local icon image with require label                                                                                                                                                                                                        |
+| submitButtonIconStyle       | {}                             | ImageStyle    | Apply all style props of Image component                                                                                                                                                                                                       |
+| submitButtonTextStyle       | {}                             | TextStyle    | Apply all style props of Text component react native                                                                                                                                                                                                        |
+| mediaSelectIcon       | default                             | Image    | Apply all style props of Image component                                                                                                                                                                                                         |
+| mediaSelectIconStyle       | {}                             | ImageStyle    | Apply all style props of Image component react native                                                                                                                                                                                                        |
+
+---
+
+---
+
+## Methods & Others Props
+| Prop                | Default                         | Type      | Description                                                                                                                                                                                                                       |
+| :------------------ | :------------------------------ | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| onBackPress                | {()=> }                         | function    | Handle close button control onPress                                                                                                                                                                              |
+| onSelect            | {()=> }                            | function   | return response after media selection                                                                                                                                                                             |
+| mediaPerPage       | 10                        | number    | numbers for images and videos render perpage by default  |
+| timerContainer             | {}                               | ViewStyle  | View styles for timer component display during recording                                                                                                                                                              |
+| timerTextStyle         | {}                             | TextStyle  | apply TextStyle props for text in timer component                                                                                                                                                          |
+| maxRecordDuration               | 30                              | number  | pass record duration value i:e 30 is in seconds , you can set your duration according to your need                                                                                                                                                                                   |
+| activeMediaType           | "Photo"                           | string | Default media type value when camera picker render for the first time  , other one is "Video"                                                                                                                                                                                                                    |
+| mediaTypeActiveButtonStyle          | {}                              | ViewStyle | Apply all style props of View component for Active Media type switch button                                                                                                                                                                                                                      |
+| mediaTypeButtonStyle   | {}                             | ViewStyle  | Apply all style props of View component for InActive Media type switch button                                                                                                                                                                                                                                                                                                                                                    |
+| mediaTypeTextStyle  | {}                           | TextStyle   | Apply all style props of Text component for inactive media button label                                                                                                                                                                                                     |
+| mediaTypeActiveTextStyle            | {}                              | TextStyle    | Apply all style props of Text component for active media button label                                                                                                                                                                                |
 
 ---
 
@@ -171,10 +213,10 @@ export default const App =()=>
 ## Repository
 
 Checkout our GitHub repository
-[@delainetech/react-native-story-camera](https://github.com/Pardeep03315/react-native-story-camera "react-native-story-camera") <br/>
+[@delainetech/react-native-story-camera](https://github.com/Pardeep03315/react-native-story-camera.git "react-native-story-camera") <br/>
 
 
 ## Contributors
 
 [Pardeep Sharma](https://github.com/Pardeep03315 "Pardeep Sharma") <br/>
-
+[Surbhi](https://github.com/Surbhi1892 "Surbhi") <br/>
