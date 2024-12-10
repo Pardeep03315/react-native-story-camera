@@ -2,7 +2,7 @@
   "name": "@delainetech/react-native-story-camera",
   "version": "1.0.0",
   "description": "React Native Whatsapp like Camera and Gallery picker for iOS & Android",
-  "homepage": "https://bitbucket.org/delainetech/cameraview/src/main/#readme",
+  "homepage": "https://github.com/Pardeep03315/react-native-story-camera.git",
   "main": "index.tsx",
   "keywords": [
     "react-native",
@@ -11,7 +11,10 @@
     "photo gallery",
     "camera picker",
     "gallery picker",
-    "whatsapp"
+    "whatsapp",
+    "story camera",
+    "story picker",
+    "status camera"
   ],
   "repository": {
     "type": "git",

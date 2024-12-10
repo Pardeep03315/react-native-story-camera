@@ -1,4 +1,4 @@
-![Camera View - DelaineTech](./assets/poster.png)
+![Camera View - DelaineTech](./assets/poster.jpeg)
 
 # react-native-story-camera
 
@@ -6,32 +6,31 @@
 
 ---
 
-React Native Story Camera is a Fully Customizable UI Library that provide camera picker module for capture photos and record videos in React Native, inspired by WhatsApp's media sharing experience. This module provides a seamless, bug-free experience, optimized for performance and functionality.
+React Native Story Camera is a fully customizable UI library that provide camera picker module for capture photos and record videos in React Native, inspired by WhatsApp's media sharing experience.
 
 
 ## 🎬  Overview
 
-React Native Story Camera allows users to capture videos and photos, as well as select multiple images and videos from their device gallery. Built with the latest version of React Native, this module provides a seamless, bug-free experience, optimized for performance and functionality.
-It is simple to use and fully customizable. It works on both android and iOS platforms.
+React Native Story Camera allows users to capture videos and photos, as well as select multiple images and videos from their device gallery. Built with the latest version of React Native.
+It is simple to use and works on both Android and iOS platforms.
 
 
 ## 🎬  Features
 
-* **Capture videos and photos**: with a customizable camera interface
-* **Select multiple images and videos**: from device gallery
-* **Pagination**: for media list available
-* **Video Recording**: smooth video recording 
-* **Fully customizable**: with available props
+* **Capture videos and photos**: A customizable camera interface
+* **Select multiple images and videos**: Access the device's media gallery.
+* **Pagination**: Smooth scrolling for large media lists.
+* **Video Recording**: Seamless recording experience 
+* **Fully customizable**: Tailor the UI to your needs with available props
 * **Cross-platform compatibility**: compatible with both Android and iOS platforms
-* **Formatted Data**: return formatted and optimized data from camera and gallery for all media type
-* **Optimized for performance**: optimized for performance and functionality
+* **Formatted Data**: Return formatted and optimized data from camera and gallery for all media type
+* **Optimized for performance**:  Built with modern React Native practices
 
 
 ## 🎬 Preview
 
 ---           
-| ------------------------------------
-| ![alt Default](./assets/preview.png)
+| ![alt Default](./assets/preview.jpeg)
 
 ---
 
@@ -200,7 +199,7 @@ export default function App() {
 | timerContainer             | {}                               | ViewStyle  | View styles for timer component display during recording                                                                                                                                                              |
 | timerTextStyle         | {}                             | TextStyle  | apply TextStyle props for text in timer component                                                                                                                                                          |
 | maxRecordDuration               | 30                              | number  | pass record duration value i:e 30 is in seconds , you can set your duration according to your need                                                                                                                                                                                   |
-| activeMediaType           | "Photo"                           | string | Default media type value when camera picker render for the first time  , other one is "Video"                                                                                                                                                                                                                    |
+| activeMediaType           | "Photo"                          | string | Default media type value when camera picker render for the first time  , other one is "Video"                                                                                                                                                                                                                    |
 | mediaTypeActiveButtonStyle          | {}                              | ViewStyle | Apply all style props of View component for Active Media type switch button                                                                                                                                                                                                                      |
 | mediaTypeButtonStyle   | {}                             | ViewStyle  | Apply all style props of View component for InActive Media type switch button                                                                                                                                                                                                                                                                                                                                                    |
 | mediaTypeTextStyle  | {}                           | TextStyle   | Apply all style props of Text component for inactive media button label                                                                                                                                                                                                     |
