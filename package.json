@@ -1,6 +1,6 @@
 {
   "name": "@delainetech/react-native-story-camera",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native Whatsapp like Camera and Gallery picker for iOS & Android",
   "homepage": "https://github.com/Pardeep03315/react-native-story-camera.git",
   "main": "index.tsx",

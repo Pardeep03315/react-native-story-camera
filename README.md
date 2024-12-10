@@ -209,10 +209,10 @@ export default function App() {
 
 ---
 
-## Repository
+<!-- ## Repository -->
 
-Checkout our GitHub repository
-[@delainetech/react-native-story-camera](https://github.com/Pardeep03315/react-native-story-camera.git "react-native-story-camera") <br/>
+<!-- Checkout our GitHub repository
+[@delainetech/react-native-story-camera](https://github.com/delainetechnologies "react-native-story-camera") <br/> -->
 
 
 ## Contributors
