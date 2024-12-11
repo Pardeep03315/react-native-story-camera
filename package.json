@@ -1,8 +1,8 @@
 {
   "name": "@delainetech/react-native-story-camera",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "React Native Whatsapp like Camera and Gallery picker for iOS & Android",
-  "homepage": "https://github.com/Pardeep03315/react-native-story-camera.git",
+  "homepage": "https://github.com/delainetechnologies/react-native-story-camera.git",
   "main": "index.tsx",
   "keywords": [
     "react-native",
@@ -18,9 +18,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pardeep03315/react-native-story-camera.git"},
+    "url": "https://github.com/delainetechnologies/react-native-story-camera.git"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "@react-native-camera-roll/camera-roll": "^7.8.3",
@@ -44,5 +47,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "license": "MIT"
 }
