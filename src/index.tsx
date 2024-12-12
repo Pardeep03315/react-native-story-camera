@@ -137,7 +137,7 @@ const CameraPicker = (props: any) => {
 
   const onSubmit = async (data: any, type :string) => {
     let responseData = await _formatResponse(data,type)
-    console.log("responseData : ",responseData);
+    // console.log("responseData : ",responseData);
     onSelect(responseData)
   };
 

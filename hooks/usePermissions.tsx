@@ -58,20 +58,19 @@ const usePermissions = () =>
       } else {
         // toProceed()
         checkMultiple([PERMISSIONS.IOS.CAMERA, PERMISSIONS.IOS.MICROPHONE,
-          PERMISSIONS.IOS.PHOTO_LIBRARY,]).then(statuses => 
+          PERMISSIONS.IOS.PHOTO_LIBRARY]).then(statuses => 
           {
-          if (statuses[PERMISSIONS.IOS.CAMERA] !== RESULTS.GRANTED || statuses[PERMISSIONS.IOS.PHOTO_LIBRARY] !== RESULTS.GRANTED )
+          if (statuses[PERMISSIONS.IOS.CAMERA] !== RESULTS.GRANTED || statuses[PERMISSIONS.IOS.PHOTO_LIBRARY] !== RESULTS.GRANTED || statuses[PERMISSIONS.IOS.MICROPHONE] !== RESULTS.GRANTED )
           {
-              requestMultiple([PERMISSIONS.IOS.CAMERA,PERMISSIONS.IOS.PHOTO_LIBRARY]).then(res => 
-              {
-                if (res[PERMISSIONS.IOS.CAMERA] == RESULTS.GRANTED  && (res[PERMISSIONS.IOS.PHOTO_LIBRARY] == RESULTS.GRANTED || res[PERMISSIONS.IOS.PHOTO_LIBRARY] == RESULTS.LIMITED)) 
+              requestMultiple([PERMISSIONS.IOS.CAMERA,PERMISSIONS.IOS.PHOTO_LIBRARY,PERMISSIONS.IOS.MICROPHONE]).then(res => 
+              {                
+                if (res[PERMISSIONS.IOS.CAMERA] == RESULTS.GRANTED  && (res[PERMISSIONS.IOS.PHOTO_LIBRARY] == RESULTS.GRANTED || res[PERMISSIONS.IOS.PHOTO_LIBRARY] == RESULTS.LIMITED) && res[PERMISSIONS.IOS.MICROPHONE] === RESULTS.GRANTED) 
                 {
                   setPermissionsGranted(true) 
                 } 
                 else 
                 {
                    setPermissionsGranted(false) 
-
                 }
             });
           } 

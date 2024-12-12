@@ -29,17 +29,18 @@ const MediaList = (props: any) => {
     // timer = 0;
     loadMedia('');
   }, []);
-
+  
   const loadMedia = async (nextCursor: string) => {
     try {
       const {edges, page_info} = await CameraRoll.getPhotos({
         first:mediaPerPage?mediaPerPage:10,
-        after: nextCursor,
+        after: nextCursor===""?undefined:nextCursor,
         assetType: 'All',
-        include: ['playableDuration'],
+        include:["playableDuration",'fileExtension','filename']
       });
 
-      const newMedia = edges.map((edge, index) => {
+      const newMedia = edges.map((edge, index) => 
+      {
         let obj = edge.node;
         obj.selected = false;
         return obj;
@@ -58,7 +59,7 @@ const MediaList = (props: any) => {
         style={styles.itemView}
         onPress={() => onPressItem(item, index)}
         onLongPress={() => onLongPress(item, index)}>
-        {item.type === 'video/mp4' && (
+        {(item.type === 'video/mp4' || item.type === 'video') && (
           <Image source={images.video_icon} style={styles.videoIcon} />
         )}
         {item.selected && (
